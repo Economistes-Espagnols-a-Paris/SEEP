@@ -169,6 +169,7 @@ a {
   color: rgba(255, 252, 245, 0.85);
   text-decoration: none;
   font-size: 0.93rem;
+  white-space: nowrap;
   padding: 0.2rem 0;
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s ease, color 0.2s ease;
@@ -578,6 +579,75 @@ a {
   font-size: 0.95rem;
 }
 
+/* Miembros: socios y colaboradores */
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.people-block {
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 0.9rem;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.people-block h3 {
+  font-size: 1.7rem;
+  margin-bottom: 0.4rem;
+}
+
+.people-desc {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.people-list {
+  margin: 1.1rem 0 0.6rem;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.15rem;
+}
+
+.people-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.2rem 0.6rem;
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.people-list li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.person-name {
+  font-weight: 600;
+}
+
+.person-aff {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+.person-link {
+  margin-left: auto;
+  color: var(--accent-dark);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.people-list .people-empty {
+  display: block;
+  color: var(--ink-soft);
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
 /* Datos de la asociación */
 .association-data {
   margin: 0;
@@ -730,7 +800,7 @@ a {
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1000px) {
   .topbar-actions {
     gap: 0.6rem;
   }
@@ -766,7 +836,8 @@ a {
 }
 
 @media (max-width: 760px) {
-  .team-grid {
+  .team-grid,
+  .people-grid {
     grid-template-columns: 1fr;
   }
 
