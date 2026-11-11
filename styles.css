@@ -550,3 +550,60 @@ p {
 .activity-list {
   align-content: start;
 }
+
+/* Quiénes somos */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr));
+  gap: 1rem;
+}
+
+.member {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  border: 1px solid var(--line);
+  border-radius: 0.85rem;
+  background: var(--surface);
+  padding: 1.1rem;
+  box-shadow: var(--shadow);
+}
+
+.member-photo {
+  flex: none;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: grid;
+  place-items: center;
+  background: var(--ink);
+  color: #fffcf5;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.member h3 {
+  font-size: 1.45rem;
+  line-height: 1.2;
+}
+
+.member-role {
+  color: var(--accent-dark);
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.member-bio {
+  margin-top: 0.35rem;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.member-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--accent-dark);
+  font-weight: 600;
+}
