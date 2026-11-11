@@ -53,7 +53,7 @@ const EN = {
   "team.b1": "PhD candidate at the Paris School of Economics. Taxation and social protection.",
   "team.b2": "PhD candidate at the Paris School of Economics. Climate policy, inequality and just energy transitions.",
   "team.b3": "PhD candidate at the Paris School of Economics. Public economics and the taxation of capital and labour.",
-  "team.b4": "PhD candidate in the Department of Economics at Sciences Po.",
+  "team.b4": "PhD candidate at Sciences Po. Quantitative macroeconomics, inequality and intergenerational transmission.",
   "team.web": "Website",
 
   "assoc.title": "About the association",
