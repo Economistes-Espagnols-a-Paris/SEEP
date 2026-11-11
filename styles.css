@@ -69,7 +69,7 @@ a {
 .hero-art {
   position: absolute;
   z-index: 1;
-  right: max(0rem, calc((100% - var(--content)) / 2 - 2rem));
+  right: max(1rem, calc((100% - var(--content)) / 2 + 3rem));
   bottom: 0;
   height: min(88%, 46rem);
   width: auto;
