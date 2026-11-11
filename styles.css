@@ -527,3 +527,26 @@ p {
 .event-block .event-list + .event-empty {
   margin-top: 1rem;
 }
+
+.intro + .intro {
+  margin-top: 0.8rem;
+}
+
+.suggestion-box .eyebrow {
+  color: var(--accent-dark);
+  margin-bottom: 0.4rem;
+}
+
+.suggestion-box h3 + p {
+  color: var(--ink-soft);
+}
+
+.event-list .event-talks li {
+  display: list-item;
+  border-left: 0;
+  padding-left: 0;
+}
+
+.activity-list {
+  align-content: start;
+}
