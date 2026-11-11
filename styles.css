@@ -56,39 +56,48 @@ a {
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 1.25rem var(--pad-x) clamp(4rem, 9vw, 6.5rem);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 1.25rem var(--pad-x) clamp(3rem, 7vw, 5rem);
   background: var(--navy);
   color: #fffcf5;
 }
 
-/* Anillos nítidos como detalle decorativo */
-.hero-shape {
+/* Dibujo de la Torre Eiffel en línea fina, con un "sol" detrás */
+.hero-art {
   position: absolute;
-  width: clamp(18rem, 38vw, 34rem);
-  aspect-ratio: 1;
-  right: max(-8rem, calc((100% - var(--content)) / 2 - 10rem));
-  bottom: -12rem;
-  border-radius: 50%;
-  border: 1px solid rgba(243, 200, 179, 0.28);
+  z-index: 1;
+  right: max(0rem, calc((100% - var(--content)) / 2 - 2rem));
+  bottom: 0;
+  height: min(88%, 46rem);
+  width: auto;
+  overflow: visible;
   pointer-events: none;
 }
 
-.hero-shape::before,
-.hero-shape::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
+.hero-art .tower path,
+.hero-art .horizon {
+  fill: none;
+  stroke: var(--accent-light);
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
 }
 
-.hero-shape::before {
-  inset: 14%;
-  border: 1px solid rgba(243, 200, 179, 0.2);
+.hero-art .tower {
+  opacity: 0.7;
 }
 
-.hero-shape::after {
-  inset: 30%;
-  background: var(--accent);
-  opacity: 0.9;
+.hero-art .horizon {
+  opacity: 0.25;
+}
+
+.hero-sun {
+  fill: var(--accent);
+  opacity: 0.75;
 }
 
 .topbar {
@@ -187,7 +196,8 @@ a {
 .hero-content {
   position: relative;
   z-index: 2;
-  margin-top: clamp(3.5rem, 11vh, 7rem);
+  margin-block: auto;
+  padding-top: clamp(2.5rem, 8vh, 5rem);
   max-width: 46rem;
   animation: riseIn 0.8s ease-out both;
 }
@@ -370,12 +380,37 @@ a {
   margin-bottom: 0.6rem;
 }
 
-.suggestion-box p:last-child {
+.suggestion-box h3 + p {
   color: rgba(255, 252, 245, 0.82);
 }
 
 .suggestion-box b {
   color: #fff;
+}
+
+.suggestion-box a {
+  color: var(--accent-light);
+  font-weight: 600;
+}
+
+.suggestion-box .disclaimer {
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(255, 252, 245, 0.15);
+  font-size: 0.85rem;
+  color: rgba(255, 252, 245, 0.62);
+}
+
+/* Enlaces dentro de texto corrido (PSE, Sciences Po) */
+.member-bio a,
+.event-meta a {
+  color: inherit;
+  text-decoration-color: var(--accent);
+}
+
+.member-bio a:hover,
+.event-meta a:hover {
+  color: var(--accent-dark);
 }
 
 .activity-list {
@@ -726,11 +761,10 @@ a {
     font-size: 0.85rem;
   }
 
-  .hero-shape {
-    width: 15rem;
-    right: -6rem;
-    bottom: -7rem;
-    opacity: 0.6;
+  .hero-art {
+    right: -5rem;
+    height: 62%;
+    opacity: 0.35;
   }
 }
 
