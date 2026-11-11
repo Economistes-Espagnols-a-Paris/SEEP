@@ -13,6 +13,7 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_ES" />
+  <meta property="og:locale:alternate" content="en_GB" />
   <meta property="og:site_name" content="SEEP" />
   <meta property="og:title" content="Sociedad de Economistas Españoles en París (SEEP)" />
   <meta
@@ -27,6 +28,7 @@
     "name": "Sociedad de Economistas Españoles en París",
     "alternateName": "SEEP",
     "legalName": "Société des Économistes Espagnols à Paris",
+    "url": "https://economistesespagnolesaparis.eu/",
     "description": "Asociación sin ánimo de lucro (loi 1901) que reúne a economistas españoles y de habla hispana de cualquier nacionalidad que estudian, investigan o trabajan en París. Su actividad principal es el PSE Spanish Seminar (PSESP).",
     "email": "societedeseconomistesespagnols@gmail.com",
     "nonprofitStatus": "Nonprofit",
@@ -56,32 +58,35 @@
 <body>
   <header class="hero" id="inicio">
     <nav class="topbar" aria-label="Navegación principal">
-      <a class="brand" href="#inicio" aria-label="Inicio SEEP">
+      <a class="brand" href="#inicio" aria-label="SEEP">
         <span class="brand-mark">SEEP</span>
-        <span class="brand-text">Sociedad de Economistas Españoles en París</span>
+        <span class="brand-text" data-i18n="brand">Sociedad de Economistas Españoles en París</span>
       </a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="menu-principal">Menú</button>
-      <ul class="menu" id="menu-principal">
-        <li><a href="#proposito">Propósito</a></li>
-        <li><a href="#actividades">Actividades</a></li>
-        <li><a href="#equipo">Quiénes somos</a></li>
-        <li><a href="#asociacion">Asociación</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
+      <div class="topbar-actions">
+        <ul class="menu" id="menu-principal">
+          <li><a href="#proposito" data-i18n="nav.purpose">Propósito</a></li>
+          <li><a href="#actividades" data-i18n="nav.activities">Actividades</a></li>
+          <li><a href="#equipo" data-i18n="nav.team">Quiénes somos</a></li>
+          <li><a href="#asociacion" data-i18n="nav.association">Asociación</a></li>
+          <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
+        </ul>
+        <button class="lang-toggle" type="button" hidden>EN</button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" data-i18n="nav.menu">Menú</button>
+      </div>
     </nav>
 
     <div class="hero-content">
-      <p class="eyebrow">Organización sin ánimo de lucro</p>
-      <h1>Sociedad de Economistas Españoles en París</h1>
-      <p class="intro">
+      <p class="eyebrow" data-i18n="hero.eyebrow">Organización sin ánimo de lucro</p>
+      <h1 data-i18n="hero.title">Sociedad de Economistas Españoles en París</h1>
+      <p class="intro" data-i18n="hero.intro">
         Nuestro objetivo es reunir a los economistas españoles que estudian, investigan o trabajan en París, creando una red activa de contacto, apoyo e intercambio. Mediante seminarios, talleres y encuentros sociales buscamos impulsar la <b>colaboración</b> e <b>integración</b> de nuestra comunidad, <b>divulgar</b> nuestros trabajos y propiciar el flujo de <b>ideas</b>.
       </p>
-      <p class="intro">
-        La asociación está abierta a todas las personas de habla hispana, sea cual sea su nacionalidad.
+      <p class="intro intro-highlight" data-i18n="hero.open">
+        La asociación está abierta a todas las personas de <b>habla hispana</b>, sea cual sea su nacionalidad.
       </p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#actividades">Ver actividades</a>
-        <a class="btn btn-secondary" href="#contacto">Unirme a la red</a>
+        <a class="btn btn-primary" href="#actividades" data-i18n="hero.cta1">Ver actividades</a>
+        <a class="btn btn-secondary" href="#contacto" data-i18n="hero.cta2">Unirme a la red</a>
       </div>
     </div>
     <div class="hero-shape" aria-hidden="true"></div>
@@ -90,25 +95,25 @@
   <main>
     <section class="section reveal" id="proposito">
       <div class="section-heading">
-        <h2>Nuestro propósito</h2>
+        <h2 data-i18n="purpose.title">Nuestro propósito</h2>
       </div>
       <div class="card-grid">
         <article class="card">
-          <h3>Conectar</h3>
-          <p>
+          <h3 data-i18n="purpose.c1.t">Conectar</h3>
+          <p data-i18n="purpose.c1.p">
             Buscamos mantener una red de apoyo entre economistas españoles y de habla hispana que viven en París,
             facilitando el contacto profesional y personal.
           </p>
         </article>
         <article class="card">
-          <h3>Compartir</h3>
-          <p>
+          <h3 data-i18n="purpose.c2.t">Compartir</h3>
+          <p data-i18n="purpose.c2.p">
             Nuestros encuentros nos permiten poner en común investigación, herramientas, bases de datos y experiencias prácticas.
           </p>
         </article>
         <article class="card">
-          <h3>Colaborar</h3>
-          <p>
+          <h3 data-i18n="purpose.c3.t">Colaborar</h3>
+          <p data-i18n="purpose.c3.p">
             La asociación sirve como plataforma de apoyo para el desarrollo de proyectos conjuntos y la búsqueda de financiación.
           </p>
         </article>
@@ -117,63 +122,60 @@
 
     <section class="section reveal alt" id="actividades">
       <div class="section-heading">
-        <h2>Qué hacemos</h2>
+        <h2 data-i18n="act.title">Qué hacemos</h2>
       </div>
 
       <div class="activity-layout">
         <div class="suggestion-box">
-          <p class="eyebrow">Nuestra actividad principal</p>
+          <p class="eyebrow" data-i18n="act.main">Nuestra actividad principal</p>
           <h3>PSESP · PSE Spanish Seminar</h3>
-          <p>
+          <p data-i18n="act.psesp">
             Seminario de investigación en la Paris School of Economics (PSE) donde
             investigadores de nuestra comunidad presentan y discuten sus trabajos en curso.
-            Abierto a cualquier persona de habla hispana interesada en la economía.
+            Abierto a cualquier persona de <b>habla hispana</b> interesada en la economía.
           </p>
         </div>
         <ul class="activity-list">
-          <li>Talleres técnicos y metodológicos abiertos a miembros.</li>
-          <li>Eventos sociales para fortalecer vínculos e integración.</li>
+          <li data-i18n="act.l1">Talleres técnicos y metodológicos abiertos a miembros.</li>
+          <li data-i18n="act.l2">Eventos sociales para fortalecer vínculos e integración.</li>
         </ul>
       </div>
 
-      <br>
-
       <div class="events-grid">
         <article class="event-block upcoming">
-          <h3>Próximos eventos</h3>
+          <h3 data-i18n="ev.next">Próximos eventos</h3>
           <ul class="event-list">
             <li>
               <div>
                 <p class="event-title">PSESP · PSE Spanish Seminar</p>
-                <p class="event-meta">Viernes 13 de noviembre · 16:00 · Paris School of Economics</p>
+                <p class="event-meta" data-i18n="ev.e1.meta">Viernes 13 de noviembre · 16:00 · Paris School of Economics</p>
               </div>
               <ul class="event-talks">
-                <li><b>Alba Vázquez García</b> · Pensiones</li>
-                <li><b>Maximiliano Moreno-López</b> · Políticas de eficiencia energética</li>
+                <li><b>Alba Vázquez García</b> · <span data-i18n="ev.e1.t1">Pensiones</span></li>
+                <li><b>Maximiliano Moreno-López</b> · <span data-i18n="ev.e1.t2">Políticas de eficiencia energética</span></li>
               </ul>
             </li>
           </ul>
-          <p class="event-empty">
+          <p class="event-empty" data-i18n="ev.propose">
             ¿Quieres proponer un seminario o taller? Escríbenos.
           </p>
-          <a class="text-link" href="#contacto">Enviar propuesta</a>
+          <a class="text-link" href="#contacto" data-i18n="ev.propose.cta">Enviar propuesta</a>
         </article>
 
         <article class="event-block history">
-          <h3>Eventos pasados</h3>
+          <h3 data-i18n="ev.past">Eventos pasados</h3>
           <ul class="event-list">
             <li>
               <div>
-                <p class="event-title">Taller de Quarto · Elisa Alonso Herrero</p>
-                <p class="event-meta">24 de septiembre · 11:30 a 13:00 · París</p>
+                <p class="event-title" data-i18n="ev.p1.title">Taller de Quarto · Elisa Alonso Herrero</p>
+                <p class="event-meta" data-i18n="ev.p1.meta">24 de septiembre · 11:30 a 13:00 · París</p>
               </div>
               <a
                 href="https://github.com/elisaalonsoh/workshop-quarto"
                 target="_blank"
                 rel="noopener noreferrer"
-              >
-                Material del taller
-              </a>
+                data-i18n="ev.p1.link"
+              >Material del taller</a>
             </li>
           </ul>
         </article>
@@ -182,43 +184,43 @@
 
     <section class="section reveal" id="equipo">
       <div class="section-heading">
-        <h2>Quiénes somos</h2>
-        <p>Junta directiva de la asociación.</p>
+        <h2 data-i18n="team.title">Quiénes somos</h2>
+        <p data-i18n="team.sub">Junta directiva de la asociación.</p>
       </div>
       <div class="team-grid">
         <article class="member">
           <div class="member-photo" aria-hidden="true">EA</div>
           <div>
             <h3>Elisa Alonso Herrero</h3>
-            <p class="member-role">Presidencia</p>
-            <p class="member-bio">Doctorado en la Paris School of Economics. Fiscalidad y protección social.</p>
-            <a class="member-link" href="https://elisaalonsoh.github.io/" target="_blank" rel="noopener noreferrer">Página web</a>
+            <p class="member-role" data-i18n="team.r1">Presidencia</p>
+            <p class="member-bio" data-i18n="team.b1">Doctorado en la Paris School of Economics. Fiscalidad y protección social.</p>
+            <a class="member-link" href="https://elisaalonsoh.github.io/" target="_blank" rel="noopener noreferrer" data-i18n="team.web">Página web</a>
           </div>
         </article>
         <article class="member">
           <img class="member-photo" src="img/equipo/maximiliano-moreno-lopez.jpg" alt="Maximiliano Moreno-López" width="96" height="96" loading="lazy" />
           <div>
             <h3>Maximiliano Moreno-López</h3>
-            <p class="member-role">Vicepresidencia</p>
-            <p class="member-bio">Doctorado en la Paris School of Economics. Política climática, desigualdad y transición energética justa.</p>
-            <a class="member-link" href="https://maximilianomoreno-lopez.github.io" target="_blank" rel="noopener noreferrer">Página web</a>
+            <p class="member-role" data-i18n="team.r2">Vicepresidencia</p>
+            <p class="member-bio" data-i18n="team.b2">Doctorado en la Paris School of Economics. Política climática, desigualdad y transición energética justa.</p>
+            <a class="member-link" href="https://maximilianomoreno-lopez.github.io" target="_blank" rel="noopener noreferrer" data-i18n="team.web">Página web</a>
           </div>
         </article>
         <article class="member">
           <div class="member-photo" aria-hidden="true">AV</div>
           <div>
             <h3>Alba Vázquez García</h3>
-            <p class="member-role">Secretaría</p>
-            <p class="member-bio">Doctorado en la Paris School of Economics. Economía pública y fiscalidad del capital y del trabajo.</p>
-            <a class="member-link" href="https://avazquezgarcia.github.io/" target="_blank" rel="noopener noreferrer">Página web</a>
+            <p class="member-role" data-i18n="team.r3">Secretaría</p>
+            <p class="member-bio" data-i18n="team.b3">Doctorado en la Paris School of Economics. Economía pública y fiscalidad del capital y del trabajo.</p>
+            <a class="member-link" href="https://avazquezgarcia.github.io/" target="_blank" rel="noopener noreferrer" data-i18n="team.web">Página web</a>
           </div>
         </article>
         <article class="member">
           <div class="member-photo" aria-hidden="true">GG</div>
           <div>
             <h3>Gustavo García Bernal</h3>
-            <p class="member-role">Tesorería</p>
-            <p class="member-bio">Doctorado en el Departamento de Economía de Sciences Po.</p>
+            <p class="member-role" data-i18n="team.r4">Tesorería</p>
+            <p class="member-bio" data-i18n="team.b4">Doctorado en el Departamento de Economía de Sciences Po.</p>
             <a class="member-link" href="https://github.com/TavoJGB" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </article>
@@ -227,51 +229,49 @@
 
     <section class="section reveal alt" id="asociacion">
       <div class="section-heading">
-        <h2>Datos de la asociación</h2>
+        <h2 data-i18n="assoc.title">Datos de la asociación</h2>
       </div>
       <dl class="association-data">
         <div>
-          <dt>Nombre legal</dt>
+          <dt data-i18n="assoc.name">Nombre legal</dt>
           <dd>Société des Économistes Espagnols à Paris</dd>
         </div>
         <div>
-          <dt>Forma jurídica</dt>
-          <dd>Asociación sin ánimo de lucro (Loi 1901)</dd>
+          <dt data-i18n="assoc.form">Forma jurídica</dt>
+          <dd data-i18n="assoc.form.v">Asociación sin ánimo de lucro (Loi 1901)</dd>
         </div>
         <div>
-          <dt>Número RNA (Répertoire National des Associations)</dt>
+          <dt data-i18n="assoc.rna">Número RNA (Répertoire National des Associations)</dt>
           <dd>W751286286</dd>
         </div>
         <div>
-          <dt>Número SIRET</dt>
+          <dt data-i18n="assoc.siret">Número SIRET</dt>
           <dd>13113676400019</dd>
         </div>
         <div>
-          <dt>Sede social</dt>
+          <dt data-i18n="assoc.seat">Sede social</dt>
           <dd>11 Place Adolphe Chérioux, 75015 Paris, France</dd>
         </div>
         <div>
-          <dt>Contacto</dt>
+          <dt data-i18n="assoc.contact">Contacto</dt>
           <dd><a href="mailto:societedeseconomistesespagnols@gmail.com">societedeseconomistesespagnols@gmail.com</a></dd>
         </div>
       </dl>
     </section>
   </main>
 
-  <footer class="footer reveal" id="contacto">
-    <h2>Contacto</h2>
-    <p>
+  <footer class="footer" id="contacto">
+    <h2 data-i18n="foot.title">Contacto</h2>
+    <p data-i18n="foot.text">
       Para unirte a la comunidad, participar en actividades o resolver dudas,
       escríbenos a:
     </p>
     <p>
-      <a href="mailto:societedeseconomistesespagnols@gmail.com">
-        societedeseconomistesespagnols@gmail.com
-      </a>
+      <a class="footer-mail" href="mailto:societedeseconomistesespagnols@gmail.com">societedeseconomistesespagnols@gmail.com</a>
     </p>
     <p class="copyright">
-      © <span id="currentYear">2026</span> SEEP · Association loi 1901 · RNA W751286286 · París
-      · <a href="aviso-legal.html">Aviso legal y privacidad</a>
+      © <span id="currentYear">2026</span> SEEP · Association loi 1901 · RNA W751286286 · Paris
+      · <a href="aviso-legal.html" data-i18n="foot.legal">Aviso legal y privacidad</a>
     </p>
   </footer>
 
