@@ -77,27 +77,41 @@ a {
   pointer-events: none;
 }
 
-.hero-art .tower path,
-.hero-art .horizon {
+.hero-art path {
   fill: none;
   stroke: var(--accent-light);
-  stroke-width: 1.2;
   stroke-linecap: round;
   stroke-linejoin: round;
   vector-effect: non-scaling-stroke;
 }
 
-.hero-art .tower {
-  opacity: 0.6;
+.hero-art .tower-main {
+  stroke-width: 1.3;
+  opacity: 0.8;
+}
+
+.hero-art .tower-fine {
+  stroke-width: 0.6;
+  opacity: 0.4;
 }
 
 .hero-art .horizon {
+  stroke-width: 1;
   opacity: 0.25;
 }
 
+/* Sol: va aparte del dibujo, más a la derecha */
 .hero-sun {
-  fill: var(--accent);
+  position: absolute;
+  z-index: 1;
+  top: 30%;
+  right: max(1.5rem, calc((100% - var(--content)) / 2 - 1rem));
+  width: clamp(4.5rem, 7vw, 6.5rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--accent);
   opacity: 0.9;
+  pointer-events: none;
 }
 
 .topbar {
