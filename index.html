@@ -3,11 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sociedad de Economistas Españoles en París</title>
+  <title>SEEP · Sociedad de Economistas Españoles en París</title>
   <meta
     name="description"
-    content="Organización sin ánimo de lucro que conecta a economistas españoles en París mediante seminarios, talleres y eventos sociales."
+    content="Asociación sin ánimo de lucro (loi 1901) que conecta a economistas españoles en París mediante seminarios, talleres y eventos sociales."
   />
+  <meta name="theme-color" content="#102736" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="SEEP" />
+  <meta property="og:title" content="Sociedad de Economistas Españoles en París (SEEP)" />
+  <meta
+    property="og:description"
+    content="Asociación sin ánimo de lucro que conecta a economistas españoles en París mediante seminarios, talleres y eventos sociales."
+  />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "Sociedad de Economistas Españoles en París",
+    "alternateName": "SEEP",
+    "legalName": "Société des Économistes Espagnols à Paris",
+    "description": "Asociación sin ánimo de lucro (loi 1901) que reúne a economistas españoles que estudian, investigan o trabajan en París.",
+    "email": "societedeseconomistesespagnols@gmail.com",
+    "nonprofitStatus": "Nonprofit",
+    "identifier": [
+      { "@type": "PropertyValue", "propertyID": "RNA", "value": "W751286286" },
+      { "@type": "PropertyValue", "propertyID": "SIRET", "value": "13113676400019" }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "11 Place Adolphe Chérioux",
+      "postalCode": "75015",
+      "addressLocality": "Paris",
+      "addressCountry": "FR"
+    }
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -15,17 +51,172 @@
     rel="stylesheet"
   />
   <link rel="stylesheet" href="styles.css" />
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-  <div id="header-container"></div>
+  <header class="hero" id="inicio">
+    <nav class="topbar" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" aria-label="Inicio SEEP">
+        <span class="brand-mark">SEEP</span>
+        <span class="brand-text">Sociedad de Economistas Españoles en París</span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="menu-principal">Menú</button>
+      <ul class="menu" id="menu-principal">
+        <li><a href="#proposito">Propósito</a></li>
+        <li><a href="#actividades">Actividades</a></li>
+        <li><a href="#asociacion">Asociación</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow">Organización sin ánimo de lucro</p>
+      <h1>Sociedad de Economistas Españoles en París</h1>
+      <p class="intro">
+        Nuestro objetivo es reunir a los economistas españoles que estudian, investigan o trabajan en París, creando una red activa de contacto, apoyo e intercambio. Mediante seminarios, talleres y encuentros sociales buscamos impulsar la <b>colaboración</b> e <b>integración</b> de nuestra comunidad, <b>divulgar</b> nuestros trabajos y propiciar el flujo de <b>ideas</b>.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#actividades">Ver actividades</a>
+        <a class="btn btn-secondary" href="#contacto">Unirme a la red</a>
+      </div>
+    </div>
+    <div class="hero-shape" aria-hidden="true"></div>
+  </header>
 
   <main>
-    <div id="proposito-container"></div>
-    <div id="actividades-container"></div>
-    <div id="asociacion-container"></div>
+    <section class="section reveal" id="proposito">
+      <div class="section-heading">
+        <h2>Nuestro propósito</h2>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Conectar</h3>
+          <p>
+            Buscamos mantener una red de apoyo entre economistas españoles que viven en París,
+            facilitando el contacto profesional y personal.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Compartir</h3>
+          <p>
+            Nuestros encuentros nos permiten poner en común investigación, herramientas, bases de datos y experiencias prácticas.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Colaborar</h3>
+          <p>
+            La asociación sirve como plataforma de apoyo para el desarrollo de proyectos conjuntos y la búsqueda de financiación.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal alt" id="actividades">
+      <div class="section-heading">
+        <h2>Qué hacemos</h2>
+      </div>
+
+      <div class="activity-layout">
+        <ul class="activity-list">
+          <li>Seminarios para compartir avances de investigación.</li>
+          <li>Talleres técnicos y metodológicos abiertos a miembros.</li>
+          <li>Eventos sociales para fortalecer vínculos e integración.</li>
+        </ul>
+      </div>
+
+      <br>
+
+      <div class="events-grid">
+        <article class="event-block upcoming">
+          <h3>Próximos eventos</h3>
+          <ul class="event-list">
+            <li>
+              <div>
+                <p class="event-title">Seminario de investigación</p>
+                <p class="event-meta">Viernes 13 de noviembre · 16:00 · París</p>
+              </div>
+              <ul class="event-talks">
+                <li><b>Alba Vázquez</b> · Pensiones</li>
+                <li><b>Maximiliano Moreno-López</b> · Políticas de eficiencia energética</li>
+              </ul>
+            </li>
+          </ul>
+          <p class="event-empty">
+            ¿Quieres proponer un seminario o taller? Escríbenos.
+          </p>
+          <a class="text-link" href="#contacto">Enviar propuesta</a>
+        </article>
+
+        <article class="event-block history">
+          <h3>Eventos pasados</h3>
+          <ul class="event-list">
+            <li>
+              <div>
+                <p class="event-title">Taller de Quarto · Elisa Alonso Herrero</p>
+                <p class="event-meta">24 de septiembre · 11:30 a 13:00 · París</p>
+              </div>
+              <a
+                href="https://github.com/elisaalonsoh/workshop-quarto"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Material del taller
+              </a>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal alt" id="asociacion">
+      <div class="section-heading">
+        <h2>Datos de la asociación</h2>
+      </div>
+      <dl class="association-data">
+        <div>
+          <dt>Nombre legal</dt>
+          <dd>Société des Économistes Espagnols à Paris</dd>
+        </div>
+        <div>
+          <dt>Forma jurídica</dt>
+          <dd>Asociación sin ánimo de lucro (Loi 1901)</dd>
+        </div>
+        <div>
+          <dt>Número RNA (Répertoire National des Associations)</dt>
+          <dd>W751286286</dd>
+        </div>
+        <div>
+          <dt>Número SIRET</dt>
+          <dd>13113676400019</dd>
+        </div>
+        <div>
+          <dt>Sede social</dt>
+          <dd>11 Place Adolphe Chérioux, 75015 Paris, France</dd>
+        </div>
+        <div>
+          <dt>Contacto</dt>
+          <dd><a href="mailto:societedeseconomistesespagnols@gmail.com">societedeseconomistesespagnols@gmail.com</a></dd>
+        </div>
+      </dl>
+    </section>
   </main>
 
-  <div id="footer-container"></div>
+  <footer class="footer reveal" id="contacto">
+    <h2>Contacto</h2>
+    <p>
+      Para unirte a la comunidad, participar en actividades o resolver dudas,
+      escríbenos a:
+    </p>
+    <p>
+      <a href="mailto:societedeseconomistesespagnols@gmail.com">
+        societedeseconomistesespagnols@gmail.com
+      </a>
+    </p>
+    <p class="copyright">
+      © <span id="currentYear">2026</span> SEEP · Association loi 1901 · RNA W751286286 · París
+      · <a href="aviso-legal.html">Aviso legal y privacidad</a>
+    </p>
+  </footer>
 
   <script src="script.js"></script>
 </body>

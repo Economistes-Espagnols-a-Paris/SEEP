@@ -1,11 +1,3 @@
-const partials = [
-  { target: document.getElementById("header-container"), file: "partials/cabecera.html" },
-  { target: document.getElementById("proposito-container"), file: "partials/proposito.html" },
-  { target: document.getElementById("actividades-container"), file: "partials/actividades.html" },
-  { target: document.getElementById("asociacion-container"), file: "partials/asociacion.html" },
-  { target: document.getElementById("footer-container"), file: "partials/pie.html" },
-];
-
 function setCurrentYear() {
   const currentYearElement = document.querySelector("#currentYear");
   if (currentYearElement) {
@@ -37,43 +29,26 @@ function initRevealAnimations() {
   const reveals = document.querySelectorAll(".reveal");
   if (!reveals.length) return;
 
+  if (!("IntersectionObserver" in window)) {
+    reveals.forEach((element) => element.classList.add("visible"));
+    return;
+  }
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
         }
       });
     },
-    {
-      threshold: 0.2,
-    }
+    { threshold: 0.05 }
   );
 
   reveals.forEach((element) => observer.observe(element));
 }
 
-Promise.all(
-  partials.map(({ target, file }) => {
-    if (!target) return Promise.resolve();
-
-    return fetch(file)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`No se pudo cargar ${file}`);
-        }
-        return response.text();
-      })
-      .then((html) => {
-        target.innerHTML = html;
-      });
-  })
-)
-  .then(() => {
-    setCurrentYear();
-    initMenu();
-    initRevealAnimations();
-  })
-  .catch((error) => {
-    console.error("Error loading sections:", error);
-  });
+setCurrentYear();
+initMenu();
+initRevealAnimations();
